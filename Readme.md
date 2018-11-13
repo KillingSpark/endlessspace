@@ -61,4 +61,5 @@ Reading:
 2. Read the buckets
 3. merge the pathes into one
 4. return the merged jsonfile
+
 Arrays are very wonky. Everything in this repo is. What did you expect?
