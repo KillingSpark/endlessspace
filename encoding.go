@@ -16,7 +16,7 @@ func min(x, y int64) int64 {
 	return y
 }
 
-const maxFilenameLength = int64(128)
+var maxFilenameLength = int64(128)
 
 func (els *ELS) mapBucketsToPath(Buckets []bucketName) string {
 	path := ""
@@ -64,7 +64,7 @@ func decodeFileName(file dataFileName) (int64, []byte, error) {
 			return idx, []byte(sep[i]), nil
 		}
 	}
-	return idx, nil, errors.New("No data found in the Filename")
+	return idx, nil, nil
 }
 
 func encodeDataChunk(data []byte, maxlen, index int64, b64 *base64.Encoding) (dataFileName, []byte, int64) {
