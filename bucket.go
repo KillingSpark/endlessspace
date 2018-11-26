@@ -229,9 +229,7 @@ func (bkt *Bucket) Read(buf []byte) (int, error) {
 		return 0, err
 	}
 	var i int
-	for i = 0; i < len(buf) && i < len(val); i++ {
-		buf[i] = val[i]
-	}
+	copy(buf, val)
 	return i, nil
 }
 
